@@ -1,0 +1,22 @@
+@import '../../scss/colors.scss';
+@import '../../scss/globals';
+
+.label-text {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+.input-text {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.cold {
+    margin-left: 20px;
+    margin-right:20px;
+}

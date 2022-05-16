@@ -24,8 +24,8 @@ import './Visualization.scss';
 cytoscape.use(fcose);
 
 let cyRef;
-// const tdata = JSON.parse(localStorage.getItem("resultid"));
-const tdata = 'kbunt1652398829201results'
+const tdata = JSON.parse(localStorage.getItem("resultid"));
+// const tdata = 'kbunt1652398829201results'
 export const Visualization = React.memo(props => {
 
   

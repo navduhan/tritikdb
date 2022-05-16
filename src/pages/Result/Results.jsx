@@ -157,9 +157,10 @@ export default class Results extends React.Component {
             </h5>
           </div>
           <div className="col-md-2">
-            <Button type="primary" shape="round" size="large">
+            <a href="/network" target="_blank"
+            rel="noopener noreferrer"><Button type="primary" shape="round" size="large">
               <b>Visualize Network</b>
-            </Button>
+            </Button></a>
           </div>
         </div>
 

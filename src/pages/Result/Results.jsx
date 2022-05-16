@@ -109,6 +109,7 @@ export default class Results extends React.Component {
     });
   }
   render() {
+    {localStorage.setItem("resultid", JSON.stringify(tdata))}
     return (
       <div className="container">
         <Divider />

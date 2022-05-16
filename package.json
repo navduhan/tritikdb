@@ -52,7 +52,7 @@
     "start": "react-dotenv && react-scripts start",
     "build": "react-dotenv && react-scripts build",
     "local": "server -s build -l 3710",
-"update": "git pull origin master && npm i && react-dotenv && react-scripts build && pm2 restart tritikdb",
+    "update": "git pull origin master && npm i && react-dotenv && react-scripts build && pm2 restart tritikdb",
 
     "eject": "react-scripts eject"
   },

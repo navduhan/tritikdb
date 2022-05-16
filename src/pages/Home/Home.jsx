@@ -275,7 +275,7 @@ export default class Home extends React.Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/images/hpidb.png" alt="" />
+            <img src="./images/hpidb.png" alt="" />
             <figcaption>HPIDB</figcaption>
           </a>
 
@@ -285,7 +285,7 @@ export default class Home extends React.Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/images/intact.png" alt="" />
+            <img src="./images/intact.png" alt="" />
             <figcaption>IntAct</figcaption>
           </a>
 
@@ -295,7 +295,7 @@ export default class Home extends React.Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/images/mint.png" alt="" />
+            <img src="./images/mint.png" alt="" />
             <figcaption>MINT</figcaption>
           </a>
 
@@ -305,7 +305,7 @@ export default class Home extends React.Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/images/biogrid.png" alt="" />
+            <img src="./images/biogrid.png" alt="" />
             <figcaption>BioGRID</figcaption>
           </a>
           <a
@@ -332,7 +332,7 @@ export default class Home extends React.Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/images/domine.png" alt="dip" />
+            <img src="./images/domine.png" alt="dip" />
             <figcaption>DOMINE</figcaption>
           </a>
           <a
@@ -350,7 +350,7 @@ export default class Home extends React.Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/images/uniprot.png" alt="" />
+            <img src="./images/uniprot.png" alt="" />
             <figcaption>UniProt</figcaption>
           </a>
           <a
@@ -359,7 +359,7 @@ export default class Home extends React.Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/images/ensembl.png" alt="" />
+            <img src="./images/ensembl.png" alt="" />
             <figcaption>HPIDB</figcaption>
           </a>
         </div>

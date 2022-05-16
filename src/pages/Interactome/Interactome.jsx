@@ -511,7 +511,7 @@ export default class Interactome extends React.Component {
         <div className="row flex-lg-row justify-content-center g-2 my-3">
         {this.state.isOpen && (
 <div className="col-md-8">
-<img src="/images/test.gif" className="loading"  height="50px"  alt=""></img>  
+<img src="./images/test.gif" className="loading"  height="50px"  alt=""></img>  
 </div>
  
 )}

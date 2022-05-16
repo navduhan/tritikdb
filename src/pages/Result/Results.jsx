@@ -4,9 +4,9 @@ import axios from "axios";
 import ReactPaginate from "react-paginate";
 import "./Results.scss";
 import { Divider, Button } from "antd";
-
-// const tdata = JSON.parse(localStorage.getItem("resultid"));
-const tdata = "kbunt1652152106184results";
+import { env } from '../../env';
+const tdata = JSON.parse(localStorage.getItem("resultid"));
+// const tdata = "kbunt1652152106184results";
 console.log(tdata);
 const pdata = JSON.parse(localStorage.getItem("param"));
 
@@ -30,7 +30,7 @@ export default class Results extends React.Component {
   fetchResults() {
     axios
       .get(
-        `http://localhost:5500/api/results/?results=${tdata}&page=${this.state.currentPage}&size=${this.state.perPage}`
+        `${env.BACKEND}/api/results/?results=${tdata}&page=${this.state.currentPage}&size=${this.state.perPage}`
       )
       .then((res) => {
         const List = res.data.results;

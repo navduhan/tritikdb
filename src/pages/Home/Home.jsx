@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Divider, Button, Input } from "antd";
+import { Divider, Button} from "antd";
 import "./Home.scss";
 import CookieConsent from "react-cookie-consent";
 import { Modal } from "react-bootstrap";

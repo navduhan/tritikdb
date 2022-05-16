@@ -9,7 +9,7 @@ import axios from 'axios';
 import { IconContext } from 'react-icons';
 import { FaImage } from 'react-icons/fa';
 import { FaCircle } from 'react-icons/fa';
-
+import { env } from '../../env';
 import FileSaver from 'file-saver';
 
 import { useState, useEffect } from 'react';
@@ -42,7 +42,7 @@ export const Visualization = React.memo(props => {
     const fetchData = async () => {
       const results = await axios
       .get(
-        `http://localhost:5500/api/results/?results=${tdata}`
+        `${env.BACKEND}/api/results/?results=${tdata}`
       );
       setData(results);
       

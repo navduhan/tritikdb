@@ -5,6 +5,7 @@ import "antd/dist/antd.min.css";
 import "./Interactome.scss";
 import {InfoCircleOutlined} from "@ant-design/icons";
 import axios from "axios";
+import { env } from '../../env';
 
 import { Modal } from "react-bootstrap";
 
@@ -144,14 +145,14 @@ export default class Interactome extends React.Component {
       return element.toLowerCase();
     });
 
-    if (this.state.status==='interolog'){
-      const postBody=[]
-    }
+    // if (this.state.status==='interolog'){
+    //   const postBody=[]
+    // }
     
 
     axios
       .get(
-        `http://localhost:5500/api/ppi/?species=${this.state.species}&identity=${this.state.identity}&coverage=${this.state.coverage}&evalue=${this.state.evalue}&intdb=${intdb}`
+        `${env.BACKEND}/api/ppi/?species=${this.state.species}&identity=${this.state.identity}&coverage=${this.state.coverage}&evalue=${this.state.evalue}&intdb=${intdb}`
       )
       .then((res) => {
         const rid = res.data;
@@ -159,7 +160,7 @@ export default class Interactome extends React.Component {
         this.setState({ resultid: rid });
 
         this.closeModel();
-        window.location.replace("http://localhost:3000/tritikdb/results");
+        window.location.replace("results");
       })
       .catch((err) => console.log(err));
   }
@@ -514,7 +515,7 @@ export default class Interactome extends React.Component {
 </div>
  
 )}
-{this.state.isOpen==false &&(
+{this.state.isOpen===false &&(
           <div className="col-md-2">
             <Button
               type="primary"

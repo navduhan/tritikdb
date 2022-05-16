@@ -4,7 +4,7 @@ import axios from "axios";
 import ReactPaginate from "react-paginate";
 import Table from "react-bootstrap/Table";
 import { Divider } from "antd";
-import { identity } from "lodash";
+import { env } from '../../env';
 
 const urlParams = new URLSearchParams(window.location.search);
 
@@ -55,7 +55,7 @@ export default class GO extends React.Component {
     }
     axios
       .get(
-        `http://localhost:5500/api/effector/?species=${term}&page=${this.state.currentPage}&size=${this.state.perPage}`
+        `${env.BACKEND}/api/effector/?species=${term}&page=${this.state.currentPage}&size=${this.state.perPage}`
       )
       .then((res) => {
         const List = res.data.data;

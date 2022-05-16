@@ -4,7 +4,7 @@ import axios from "axios";
 import ReactPaginate from "react-paginate";
 import Table from "react-bootstrap/Table";
 import { Divider } from "antd";
-
+import { env } from '../../env';
 const urlParams = new URLSearchParams(window.location.search);
 
 const species = urlParams.get("id");
@@ -43,7 +43,7 @@ export default class GO extends React.Component {
   fetchResults() {
     axios
       .get(
-        `http://localhost:5500/api/interpro/?species=${species}&page=${this.state.currentPage}&size=${this.state.perPage}`
+        `${env.BACKEND}/api/interpro/?species=${species}&page=${this.state.currentPage}&size=${this.state.perPage}`
       )
       .then((res) => {
         const List = res.data.data;

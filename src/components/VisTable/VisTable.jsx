@@ -3,7 +3,7 @@ import Table from 'react-bootstrap/Table';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
+import { env } from '../../env';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -25,7 +25,7 @@ export const VisTable = ({tableRowClicked, handleSearchChange}) => {
     const fetchData = async () => {
       const results = await axios
       .get(
-        `http://localhost:5500/api/results/?results=${tdata}`
+        `${env.BACKEND}/api/results/?results=${tdata}`
       );
       setData(results);
 

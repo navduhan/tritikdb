@@ -4,6 +4,14 @@ import { env } from './env';
 import { TNavbar } from './components/TNavbar/TNavbar';
 import Home from './pages/Home/Home';
 import Interactome from './pages/Interactome/Interactome';
+import Results from './pages/Result/Results';
+import GO from './pages/Annotation/GO';
+import VisPage from './pages/VisPage/VisPage';
+import KEGG from './pages/Annotation/KEGG';
+import Interpro from './pages/Annotation/Interpro';
+import Local from './pages/Annotation/Local';
+import TF from './pages/Annotation/TF';
+import Virulence from './pages/Annotation/Virulence';
 
 import {
     BrowserRouter as Router,
@@ -30,6 +38,34 @@ export class TRITIKDB extends Component {
                     <Route path={`${env.BASE_URL}/interactome`} element={<Interactome />}>
                     
                     </Route>
+                    <Route path={`${env.BASE_URL}/results`} element={<Results />}>
+                    
+                    </Route>
+
+                    <Route path={`${env.BASE_URL}/go/`}  element={<GO />}>
+                    
+                    </Route>
+
+                    <Route path={`${env.BASE_URL}/kegg/`}  element={<KEGG />}>
+                    
+                    </Route>
+                    <Route path={`${env.BASE_URL}/interpro/`}  element={<Interpro />}>
+                    
+                    </Route>
+                    <Route path={`${env.BASE_URL}/local/`}  element={<Local />}>
+                    
+                    </Route>
+                    <Route path={`${env.BASE_URL}/tf/`}  element={<TF />}>
+                    
+                    </Route>
+                    <Route path={`${env.BASE_URL}/virulence/`}  element={<Virulence />}>
+                    
+                    </Route>
+
+                    <Route path={`${env.BASE_URL}/network`}  element={<VisPage />}>
+                    
+                    </Route>
+                
                 
                 </Routes>
                  </Container>

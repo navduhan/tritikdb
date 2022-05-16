@@ -6,7 +6,7 @@ import './TNavbar.scss';
 import lablogo from './lab_logo_red.png';
 import usulogo from './usulogo2.png';
 import dblogo from './TritiKBdb.png';
-import {Divider} from 'antd';
+
 
 class TNavbar extends React.Component {
   constructor(props) {

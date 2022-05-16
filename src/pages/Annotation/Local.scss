@@ -1,19 +1,21 @@
 @import '../../scss/colors.scss';
 @import '../../scss/globals';
 
-.kbl-table {
+.go-table {
 
   overflow: hidden;
   border-radius: $border-radius;
   box-shadow: 0 .0925rem .165rem rgba(0, 0, 0, 0.19);
   border: none;
+
   
 
 
-  .kbl-thead {
+  .go-thead {
     background: $palette-2;
     border-bottom: 1px solid $color-light-grey;
     color: white;
+    
 
   
   }
@@ -29,8 +31,9 @@
 }
 
 .table-responsive {
-max-height: 500px;
-  padding: 5px 2px;
+max-height: 600px;
+
+  padding: 1rem;
   border: none;
 }
 
@@ -101,56 +104,19 @@ max-height: 500px;
   margin: 15px 0;
 }
 
-.heading{
-  padding: 0.7rem 0.5rem;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  background-color: $palette-2;
-  color:white;
-  font-weight: 500;
-  font-size: 16px;
-  font-family: "Roboto", "Helvetica Neue", Arial, Tahoma;
-}
 
-.heading2{
-  
-  padding-bottom: 0;
-  margin-top: 0;
-  font-weight: 500;
-  font-size: 16px;
-  font-family: "Roboto", "Helvetica Neue", Arial, Tahoma;
-}
-
-.pathogen{
-  color: rgb(236, 63, 63);
-  font-weight: 600;
-
-  &:hover{
-    color: lightcoral;
-    font-weight: 600;
+.desc{
+    text-align: left ;
     
-  }
+    max-width: 100px;
 }
 
-.host{
-  color: blue;
-  font-weight: 600;
-
-  &:hover{
-    color: rgb(36, 186, 236);
-    font-weight: 600;
+.desc2{
+    text-align: left ;
     
-  }
+    max-width: 200px;
 }
 
-.interactor{
-  color: rgb(49, 162, 49);
-  font-weight: 600;
 
-  &:hover{
-    color: rgb(36, 186, 236);
-    font-weight: 600;
-    
-  }
-}
+
 

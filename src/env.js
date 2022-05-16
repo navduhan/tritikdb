@@ -1,3 +1,3 @@
 export const env ={
-    BASE_URL: '/tritikdb',
+    BASE_URL: '/tritikdb'
 }

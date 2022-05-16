@@ -157,7 +157,7 @@ export default class Results extends React.Component {
             </h5>
           </div>
           <div className="col-md-2">
-            <a href="/network" target="_blank"
+            <a href={`${env.BASE_URL}/nework`} target="_blank"
             rel="noopener noreferrer"><Button type="primary" shape="round" size="large">
               <b>Visualize Network</b>
             </Button></a>

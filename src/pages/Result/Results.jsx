@@ -10,7 +10,7 @@ import { downloadCsv } from "../../components/CSVDownload/CSVDownload";
 
 const pdata = JSON.parse(localStorage.getItem("param"));
 
-const tdata = pdata.resulid
+const tdata = pdata.resultid
 // const tdata = "kbunt1652152106184results"; 
 export default class Results extends React.Component {
   constructor(props) {

@@ -40,7 +40,7 @@ export class NodeMenu extends Component {
               <a href={uniLink} className="link mr-2" target="_blank" rel="noopener noreferrer">
                 NCBI
               </a>
-              |
+              &nbsp;|&nbsp;
               <a href={ncbiLink} className="link ml-2" target="_blank" rel="noopener noreferrer">
                 ENSEMBL
               </a>

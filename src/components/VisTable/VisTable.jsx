@@ -10,8 +10,8 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 import './VisTable.scss';
-const tdata = JSON.parse(localStorage.getItem("resultid"));
-// const tdata = 'kbunt1652398829201results'
+// const tdata = JSON.parse(localStorage.getItem("resultid"));
+const tdata = 'kbunt1652398829201results'
 export const VisTable = ({tableRowClicked, handleSearchChange}) => {
   const { id } = useParams();
   let [data, setData] = useState([]);
@@ -25,13 +25,13 @@ export const VisTable = ({tableRowClicked, handleSearchChange}) => {
     const fetchData = async () => {
       const results = await axios
       .get(
-        `${env.BACKEND}/api/results/?results=${tdata}`
+        `${env.BACKEND}/api/network/?results=${tdata}`
       );
       setData(results);
 
       
-        setTableData(results.data);
-        setTotalData(results.data);
+        setTableData(results.data.results);
+        setTotalData(results.data.results);
         console.log(results);
       
     }
@@ -62,7 +62,7 @@ export const VisTable = ({tableRowClicked, handleSearchChange}) => {
                 target: result.Pathogen_Protein,
                 gene: result.Host_Protein,
                 pathogenProtein: result.Pathogen_Protein,
-                id : `${result.intdb_x}-${result.Host_Protein}-${result.Pathogen_Protein}`
+                id : `${result.intdb_x}: ${result.Host_Protein}-${result.Pathogen_Protein}`
               };
 
               tableRowClicked(data);

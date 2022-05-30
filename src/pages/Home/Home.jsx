@@ -1,9 +1,9 @@
 import React from "react";
-
+import { env } from '../../env';
 import { Divider, Button} from "antd";
 import "./Home.scss";
 import CookieConsent from "react-cookie-consent";
-import { Modal } from "react-bootstrap";
+import { Modal} from "react-bootstrap";
 export default class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -135,14 +135,17 @@ export default class Home extends React.Component {
                   </Modal.Body>
                 </Modal>
 
-                <a href="interactome">
+                <a href={`${env.BASE_URL}/interactome`} target="_blank"
+            rel="noopener noreferrer">
                   <Button type="primary" shape="round">
                     Search Interactome
                   </Button>
                 </a>
-                <Button className="mx-4" type="primary" shape="round">
+                <a href={`${env.BASE_URL}/search`} target="_blank"
+            rel="noopener noreferrer"><Button className="mx-4" type="primary" shape="round">
                   Advance Search Module
                 </Button>
+                </a>
               </div>
             </div>
           </div>
@@ -314,8 +317,8 @@ export default class Home extends React.Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/images/string.png" alt="" />
-            <figcaption>BioGRID</figcaption>
+            <img src="./images/string.png" alt="" />
+            <figcaption>STRING</figcaption>
           </a>
           <a
             href="http://dip.doe-mbi.ucla.edu/"
@@ -323,7 +326,7 @@ export default class Home extends React.Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/images/dip.png" alt="dip" />
+            <img src="./images/dip.png" alt="dip" />
             <figcaption>DIP</figcaption>
           </a>
           <a
@@ -341,7 +344,7 @@ export default class Home extends React.Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/images/3did.png" alt="" />
+            <img src="./images/3did.png" alt="" />
             <figcaption>3did</figcaption>
           </a>
           <a

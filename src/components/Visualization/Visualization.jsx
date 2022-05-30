@@ -24,8 +24,8 @@ import './Visualization.scss';
 cytoscape.use(fcose);
 
 let cyRef;
-const tdata = JSON.parse(localStorage.getItem("resultid"));
-// const tdata = 'kbunt1652398829201results'
+// const tdata = JSON.parse(localStorage.getItem("resultid"));
+const tdata = 'kbunt1652398829201results'
 export const Visualization = React.memo(props => {
 
   
@@ -38,19 +38,19 @@ export const Visualization = React.memo(props => {
   }
 
   useEffect(() => {
-    setSearchTerm(props.searchTerm);
+    setSearchTerm(searchTerm);
     const fetchData = async () => {
       const results = await axios
       .get(
-        `${env.BACKEND}/api/results/?results=${tdata}`
+        `${env.BACKEND}/api/network/?results=${tdata}`
       );
       setData(results);
       
-      setGraphData(results.data);
+      setGraphData(results.data.results);
     }
 
     fetchData();
-  }, [props.searchTerm]);
+  }, [searchTerm]);
 
   let elements = [];
 
@@ -132,6 +132,7 @@ const opts = {
     {
       selector: 'edge',
       style: {
+
         width: 1
       }
     }
@@ -163,7 +164,7 @@ const opts = {
               if (uniquePatProteins) {
                 const patIds = uniquePatProteins.map(item => {return `#${item}`});
                 for (let id of patIds) {
-                  cyRef.$(id).style({'background-color': '#e08351'});
+                  cyRef.$(id).style({'background-color': '#bf2d2d'});
                 }
               }
 
@@ -193,7 +194,7 @@ const opts = {
         </Col>
 
         <Col sm={4} className="text-right pr-4">
-          <Button className="kbl-btn-1 px-3 mr-4" title="Download JSON" onClick={() => {
+          <Button className="kbl-btn-1 px-3 mx-4" title="Download JSON" onClick={() => {
               const cyJson = cyRef.json();
               const str = JSON.stringify(cyJson);
               const bytes = new TextEncoder().encode(str);
@@ -215,9 +216,9 @@ const opts = {
         </Col>
       </Row>
 
-      <Row className="text-left">
-        <Col sm={4}>
-          <Row>
+      <Row className="species">
+        <Col sm={4} >
+          <Row >
             <Col>
               <IconContext.Provider value={{ className: "legend-icon host", color: '#266bbf' }}>
                 <FaCircle />
@@ -227,7 +228,7 @@ const opts = {
             </Col>
           </Row>
 
-          <Row className="mt-2">
+          <Row className="mt-2 ">
             <Col>
               <IconContext.Provider value={{ className: "legend-icon pat", color: '#e08351' }}>
                 <FaCircle />
@@ -240,7 +241,7 @@ const opts = {
         <Col sm={4}>
           <Row>
             <Col>
-              <IconContext.Provider value={{ className: "legend-icon int", color: '#c76181' }}>
+              <IconContext.Provider value={{ className: "legend-icon int", color: '#f5a290' }}>
                 <FaCircle />
               </IconContext.Provider>
 
@@ -250,7 +251,7 @@ const opts = {
 
           <Row className="mt-2">
             <Col>
-              <IconContext.Provider value={{ className: "legend-icon dom", color: '#b560cc' }}>
+              <IconContext.Provider value={{ className: "legend-icon dom", color: '#5a6ef9' }}>
                 <FaCircle />
               </IconContext.Provider>
 
@@ -265,6 +266,43 @@ const opts = {
               </IconContext.Provider>
 
               <span className="legend-text">INTACT</span>
+            </Col>
+          </Row>
+          <Row className="mt-2">
+            <Col>
+              <IconContext.Provider value={{ className: "legend-icon con", color: '#6ca6bc' }}>
+                <FaCircle />
+              </IconContext.Provider>
+
+              <span className="legend-text">BioGrid</span>
+            </Col>
+          </Row>
+          
+          <Row className="mt-2">
+            <Col>
+              <IconContext.Provider value={{ className: "legend-icon con", color: '#7e7ef0' }}>
+                <FaCircle />
+              </IconContext.Provider>
+
+              <span className="legend-text">DIP</span>
+            </Col>
+          </Row>
+          <Row className="mt-2">
+            <Col>
+              <IconContext.Provider value={{ className: "legend-icon con", color: '#f07eba' }}>
+                <FaCircle />
+              </IconContext.Provider>
+
+              <span className="legend-text">STRING</span>
+            </Col>
+          </Row>
+          <Row className="mt-2">
+            <Col>
+              <IconContext.Provider value={{ className: "legend-icon con", color: '#d6d978' }}>
+                <FaCircle />
+              </IconContext.Provider>
+
+              <span className="legend-text">ArabiHPI</span>
             </Col>
           </Row>
         </Col>

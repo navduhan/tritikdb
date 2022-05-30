@@ -21,7 +21,7 @@
 }
 
 .nav-link {
-  border-bottom: solid 4px transparent;
+  border-bottom: solid 2px transparent;
   transition: 0.3s;
   padding-bottom: 0px;
   font-size: 1rem;
@@ -30,6 +30,7 @@
 
   &.current {
     color: $text-main!important;
+    border-color: $palette-1;
   }
 
   &:hover:not(.current) {

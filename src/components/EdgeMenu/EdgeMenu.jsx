@@ -21,8 +21,8 @@ export class EdgeMenu extends Component {
     let geneLink = `https://www.ncbi.nlm.nih.gov/search/all/?term=${this.props.edgeData.Pathogen_Protein}`;
     let proteinLink = `https://plants.ensembl.org/Multi/Search/Results?species=all;idx=;q=${this.props.edgeData.Host_Protein};site=ensemblunit`;
 
-    let intType = this.props.edgeData.id.split('-')[0];
-    intType = intType.charAt(0).toUpperCase() + intType.slice(1);
+    let intType = this.props.edgeData.id.split(':')[0];
+    // intType = intType.charAt(0).toUpperCase() + intType.slice(1);
 
     return (
       <div>
@@ -37,7 +37,7 @@ export class EdgeMenu extends Component {
               <a href={proteinLink} className="link mr-2" target="_blank" rel="noopener noreferrer">
                 Host Protein
               </a>
-              |
+              &nbsp;|&nbsp;
               <a href={geneLink} className="link ml-2" target="_blank" rel="noopener noreferrer">
                 Pathogen Protein
               </a>

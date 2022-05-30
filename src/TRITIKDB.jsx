@@ -12,7 +12,7 @@ import Interpro from './pages/Annotation/Interpro';
 import Local from './pages/Annotation/Local';
 import TF from './pages/Annotation/TF';
 import Virulence from './pages/Annotation/Virulence';
-
+import Search from './pages/Search/Search';
 import {
     BrowserRouter as Router,
     Routes,
@@ -59,6 +59,9 @@ export class TRITIKDB extends Component {
                     
                     </Route>
                     <Route path={`${env.BASE_URL}/virulence/`}  element={<Virulence />}>
+                    
+                    </Route>
+                    <Route path={`${env.BASE_URL}/search/`}  element={<Search />}>
                     
                     </Route>
 

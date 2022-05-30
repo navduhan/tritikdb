@@ -5,8 +5,10 @@ import ReactPaginate from "react-paginate";
 import "./Results.scss";
 import { Divider, Button } from "antd";
 import { env } from '../../env';
+import { downloadCsv } from "../../components/CSVDownload/CSVDownload";
 const tdata = JSON.parse(localStorage.getItem("resultid"));
 // const tdata = "kbunt1652152106184results";
+
 console.log(tdata);
 const pdata = JSON.parse(localStorage.getItem("param"));
 
@@ -23,6 +25,7 @@ export default class Results extends React.Component {
       pageCount: 20,
       hostp: 0,
       pathogenp: 0,
+      dResult:[],
     };
     this.handlePageClick = this.handlePageClick.bind(this);
   }
@@ -46,8 +49,20 @@ export default class Results extends React.Component {
       });
   }
 
+  downloadResults(){
+    axios
+      .get(
+        `${env.BACKEND}/api/results/?results=${tdata}`
+      )
+      .then((res) => {
+        const dResult = res.data.results 
+        this.setState({dResult})
+      })
+  }
+
   componentDidMount() {
     this.fetchResults();
+    this.downloadResults();
   }
 
   handlePageClick = (e) => {
@@ -110,6 +125,8 @@ export default class Results extends React.Component {
   }
   render() {
     {localStorage.setItem("resultid", JSON.stringify(tdata))}
+
+    const csvButton = <Button type="primary" shape="round" size="large" onClick={() => downloadCsv(this.state.dResult, "interolog")}> Download CSV</Button>;
     return (
       <div className="container">
         <Divider />
@@ -148,9 +165,8 @@ export default class Results extends React.Component {
         </div>
         <div className="row flex-lg-row align-items-center g-2 my-2 mx-2">
           <div className="col-md-2">
-            <Button type="primary" shape="round" size="large">
-              <b>Download CSV</b>
-            </Button>
+
+            {csvButton}
           </div>
           <div className="col-md-8">
             <h5>

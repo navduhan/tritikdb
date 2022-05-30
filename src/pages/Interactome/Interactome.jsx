@@ -236,7 +236,7 @@ export default class Interactome extends React.Component {
         this.setState({ resultid: rid });
 
         this.closeModel();
-        window.location.replace("results");
+        window.location.replace(`results`);
       })
       .catch((err) => console.log(err));
   }
@@ -265,7 +265,7 @@ export default class Interactome extends React.Component {
       console.log(this.state.idType)
     return (
       <div className="container">
-        {/* {localStorage.setItem("resultid", JSON.stringify(this.state.resultid))} */}
+        {localStorage.setItem("resultid", JSON.stringify(this.state.resultid))}
         <Divider />
         {console.log(this.state.genes)}
         <div className="row flex-lg-row align-items-center g-2 my-2">

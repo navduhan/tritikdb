@@ -88,15 +88,33 @@ export default class GO extends React.Component {
           <tbody>
             {this.state.List.map((result, index) => (
               <tr key={index + 1}>
-                <td>
-                  <a
-                    href={`https://plants.ensembl.org/Multi/Search/Results?species=all;idx=;q=${result["gene"]};site=ensemblunit`}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {result["gene"]}
-                  </a>
-                </td>
+{(() => {
+                  if (species === "tindica") {
+                    return (
+                      <td>
+                        <a
+                          href={`https://www.ncbi.nlm.nih.gov/search/all/?term=${result["gene"]}%09`}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {result["gene"]}
+                        </a>
+                      </td>
+                    );
+                  } else {
+                    return (
+                      <td>
+                        <a
+                          href={`https://plants.ensembl.org/Multi/Search/Results?species=all;idx=;q=${result["gene"]};site=ensemblunit`}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {result["gene"]}
+                        </a>
+                      </td>
+                    );
+                  }
+                })()}
                 <td>
                   <a
                     href={`https://www.kegg.jp/pathway/${result["pathway"]}`}

@@ -71,6 +71,9 @@ export default class Home extends React.Component {
                   size="large"
                 /> */}
                 <p className="info">
+                The study of molecular interactions, especially protein-protein interactions, is crucial for understanding the disease infection mechanism in plants. These interactions play an important role in disease infection and host immune responses against the pathogen attack. Among some critical fungal diseases, the incidences of Karnal bunt (Tilletia indica) around the world has hindered the export of the crops such as Wheat from infected regions, thus causing substantial economic losses. Due to sparse information on T. indica, limited insight is available in gaining in-depth knowledge of the interaction mechanisms between the host and pathogen proteins during the disease infection process. Here, we report the development of a comprehensive database and webserver, TritiKBdb, that implements various tools to study the protein-protein interactions in the Triticum species-Tilletia indica pathosystem. The interactomics tool allows the user to visualize / compare the networks of the predicted interactions. TritiKBdb is a user-friendly database that provides functional annotations such as subcellular localization, available domains, KEGG pathways, and GO terms of the host and pathogen proteins. Additionally, the information about the host and pathogen proteins that serve as transcription factors and effectors, respectively, is also made available. We believe that TritiKBdb will serve as a beneficial resource to the research community. 
+                </p>
+                {/* <p className="info">
                   Wheat ({" "}
                   <i>
                     <b>Triticum aestivum</b>
@@ -110,7 +113,7 @@ export default class Home extends React.Component {
                     (Ref2)
                   </Button>
                   .
-                </p>
+                </p> */}
                 <Modal
                   size="xl"
                   style={{ bottom: 0 }}

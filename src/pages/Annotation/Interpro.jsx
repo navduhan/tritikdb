@@ -4,7 +4,7 @@ import axios from "axios";
 import ReactPaginate from "react-paginate";
 import Table from "react-bootstrap/Table";
 import { Divider } from "antd";
-import { env } from '../../env';
+import { env } from "../../env";
 const urlParams = new URLSearchParams(window.location.search);
 
 const species = urlParams.get("id");
@@ -86,33 +86,48 @@ export default class GO extends React.Component {
               <th>Domian ID</th>
               <th>Description</th>
               <th>Score</th>
-              
             </tr>
           </thead>
           <tbody>
             {this.state.List.map((result, index) => (
               <tr key={index + 1}>
+                {(() => {
+                  if (species === "tindica") {
+                    return (
+                      <td>
+                        <a
+                          href={`https://www.ncbi.nlm.nih.gov/search/all/?term=${result["gene"]}%09`}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {result["gene"]}
+                        </a>
+                      </td>
+                    );
+                  } else {
+                    return (
+                      <td>
+                        <a
+                          href={`https://plants.ensembl.org/Multi/Search/Results?species=all;idx=;q=${result["gene"]};site=ensemblunit`}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {result["gene"]}
+                        </a>
+                      </td>
+                    );
+                  }
+                })()}
+
+                <td>{result["length"]}</td>
                 <td>
-                  <a
-                    href={`https://plants.ensembl.org/Multi/Search/Results?species=all;idx=;q=${result["gene"]};site=ensemblunit`}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {result["gene"]}
+                  <a href={`https://www.ebi.ac.uk/interpro/entry/InterPro/${result['interpro_id']}/`} target="_blank"
+                          rel="noreferrer">
+                  {result["interpro_id"]}
                   </a>
                 </td>
-                <td>
-                    {result["length"]}
-                </td>
-                <td>
-                    {result["interpro_id"]}
-                </td>
-                <td>
-                    {result["sourcedb"]}
-                </td>
-                <td>
-                    {result["domain"]}
-                </td>
+                <td>{result["sourcedb"]}</td>
+                <td>{result["domain"]}</td>
                 <td className="desc">{result["domain_description"]}</td>
 
                 <td>{result["score"]}</td>

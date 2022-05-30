@@ -24,8 +24,8 @@ import './Visualization.scss';
 cytoscape.use(fcose);
 
 let cyRef;
-// const tdata = JSON.parse(localStorage.getItem("resultid"));
-const tdata = 'kbunt1652398829201results'
+const tdata = JSON.parse(localStorage.getItem("resultid"));
+// const tdata = 'kbunt1652398829201results'
 export const Visualization = React.memo(props => {
 
   
@@ -164,16 +164,16 @@ const opts = {
               if (uniquePatProteins) {
                 const patIds = uniquePatProteins.map(item => {return `#${item}`});
                 for (let id of patIds) {
-                  cyRef.$(id).style({'background-color': '#bf2d2d'});
+                  cyRef.$(id).style({'background-color': '#e08351'});
                 }
               }
 
               for (let id of hpidbs) {
-                cyRef.$(id).style({'line-color': '#f5a290'});
+                cyRef.$(id).style({'line-color': '#ff5733'});
               }
 
               for (let id of mints) {
-                cyRef.$(id).style({'line-color': '#5a6ef9'});
+                cyRef.$(id).style({'line-color': '#2b86ab'});
               }
 
               for (let id of intacts) {
@@ -241,7 +241,7 @@ const opts = {
         <Col sm={4}>
           <Row>
             <Col>
-              <IconContext.Provider value={{ className: "legend-icon int", color: '#f5a290' }}>
+              <IconContext.Provider value={{ className: "legend-icon int", color: '#ff5733' }}>
                 <FaCircle />
               </IconContext.Provider>
 
@@ -251,7 +251,7 @@ const opts = {
 
           <Row className="mt-2">
             <Col>
-              <IconContext.Provider value={{ className: "legend-icon dom", color: '#5a6ef9' }}>
+              <IconContext.Provider value={{ className: "legend-icon dom", color: '#2b86ab' }}>
                 <FaCircle />
               </IconContext.Provider>
 

@@ -10,8 +10,8 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 import './VisTable.scss';
-// const tdata = JSON.parse(localStorage.getItem("resultid"));
-const tdata = 'kbunt1652398829201results'
+const tdata = JSON.parse(localStorage.getItem("resultid"));
+// const tdata = 'kbunt1652398829201results'
 export const VisTable = ({tableRowClicked, handleSearchChange}) => {
   const { id } = useParams();
   let [data, setData] = useState([]);

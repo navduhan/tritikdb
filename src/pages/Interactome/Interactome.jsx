@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap";
-import { Divider, Radio, Checkbox, Button, Input } from "antd";
+import { Divider, Radio, Checkbox, Button } from "antd";
 import "antd/dist/antd.min.css";
 import "./Interactome.scss";
 import { InfoCircleOutlined } from "@ant-design/icons";
@@ -251,6 +251,8 @@ export default class Interactome extends React.Component {
         pe: this.state.pevalue,
         pi: this.state.pidentity,
         pc: this.state.pcoverage,
+        resultid: this.state.resultid,
+        category: this.state.status,
       })
     );
     let genePlaceholder = 'Example ENSEMBL-IDs: TraesCS6A02G059000, TraesCS5A02G216600, TraesCS2A02G417800';
@@ -263,7 +265,7 @@ export default class Interactome extends React.Component {
       console.log(this.state.idType)
     return (
       <div className="container">
-        {localStorage.setItem("resultid", JSON.stringify(this.state.resultid))}
+        {/* {localStorage.setItem("resultid", JSON.stringify(this.state.resultid))} */}
         <Divider />
         {console.log(this.state.genes)}
         <div className="row flex-lg-row align-items-center g-2 my-2">

@@ -6,12 +6,12 @@ import "./Results.scss";
 import { Divider, Button } from "antd";
 import { env } from '../../env';
 import { downloadCsv } from "../../components/CSVDownload/CSVDownload";
-const tdata = JSON.parse(localStorage.getItem("resultid"));
-// const tdata = "kbunt1652152106184results";
+// const tdata = JSON.parse(localStorage.getItem("resultid"));
 
-console.log(tdata);
 const pdata = JSON.parse(localStorage.getItem("param"));
 
+const tdata = pdata.resulid
+// const tdata = "kbunt1652152106184results"; 
 export default class Results extends React.Component {
   constructor(props) {
     super(props);
@@ -124,14 +124,15 @@ export default class Results extends React.Component {
     });
   }
   render() {
-    {localStorage.setItem("resultid", JSON.stringify(tdata))}
-
+   
     const csvButton = <Button type="primary" shape="round" size="large" onClick={() => downloadCsv(this.state.dResult, "interolog")}> Download CSV</Button>;
     return (
       <div className="container">
+         {localStorage.setItem("resultid", JSON.stringify(pdata.resultid))}
+
         <Divider />
         <div className="row flex-lg-row align-items-center ">
-          <p className="heading2"> Your Selectd Search Parameters are:</p>
+          <p className="heading2"> Your Selected Search Parameters are:</p>
           <div className="col-md-6">
             <div className="row mx-4">
               <div className="col-md-2 heading2">

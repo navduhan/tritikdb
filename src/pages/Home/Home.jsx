@@ -53,7 +53,7 @@ export default class Home extends React.Component {
                   <p className="heading3"> Gene Ontology: 816 </p>
                   <p className="heading3"> KEGG Pathway: 375 </p>
                   <p className="heading3"> Effector Proteins: 2651 </p>
-                  <p className="heading3"> Seceretory Proteins: 705 </p>
+                  <p className="heading3"> Secretory Proteins: 705 </p>
                   <p className="heading3"> Effector and Secretory: 230 </p>
                 </div>
               </div>

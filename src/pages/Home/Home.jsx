@@ -366,7 +366,7 @@ export default class Home extends React.Component {
             rel="noopener noreferrer"
           >
             <img src="./images/ensembl.png" alt="" />
-            <figcaption>HPIDB</figcaption>
+            <figcaption>ENSEMBL</figcaption>
           </a>
         </div>
         <Divider />

@@ -8,7 +8,7 @@ import { env } from '../../env';
 import { downloadCsv } from "../../components/CSVDownload/CSVDownload";
 
 const tdata = JSON.parse(localStorage.getItem("resultid"));
-
+// const tdata = 'kbunt1652398829201results'
 const pdata = JSON.parse(localStorage.getItem("param"));
 
 export default class Results extends React.Component {

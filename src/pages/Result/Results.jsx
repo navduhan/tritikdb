@@ -8,7 +8,7 @@ import { env } from '../../env';
 import { downloadCsv } from "../../components/CSVDownload/CSVDownload";
 
 const tdata = JSON.parse(localStorage.getItem("resultid"));
-// const tdata = 'kbunt1652398829201results'
+
 const pdata = JSON.parse(localStorage.getItem("param"));
 
 export default class Results extends React.Component {
@@ -123,7 +123,9 @@ export default class Results extends React.Component {
     });
   }
   render() {
-    {localStorage.setItem("resultid", JSON.stringify(tdata))}
+    if (tdata){
+      localStorage.setItem("resultid", JSON.stringify(tdata))
+    }
     const csvButton = <Button type="primary" shape="round" size="large" onClick={() => downloadCsv(this.state.dResult, "interolog")}> Download CSV</Button>;
     return (
       <div className="container">

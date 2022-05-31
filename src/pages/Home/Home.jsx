@@ -1,9 +1,9 @@
 import React from "react";
 import { env } from '../../env';
-import { Divider, Button} from "antd";
+import { Divider, Button } from "antd";
 import "./Home.scss";
 import CookieConsent from "react-cookie-consent";
-import { Modal} from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 export default class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -18,7 +18,7 @@ export default class Home extends React.Component {
     return (
       <div className="container">
         <div className="row flex-lg-row justify-content-center g-2 my-2">
-          <div className="col-md-8">
+          <div className="col-md-9">
             <Divider />
             <div className="row flex-lg-row justify-content-center g-2 my-2">
               <div className="col-md-4">
@@ -57,102 +57,43 @@ export default class Home extends React.Component {
                   <p className="heading3"> Effector and Secretory: 230 </p>
                 </div>
               </div>
-              <div className="col-md-1"></div>
-              <div className="col-md-7">
+              
+              <div className="col-md-7 infodiv">
                 <h5>
                   TritiKBdb: Host-Pathogen Interaction Database of Karnal Bunt
                   disease
                 </h5>
                 <Divider />
-                {/* <Input
-                  placeholder="input search text"
-                  allowClear
-                 
-                  size="large"
-                /> */}
-                <p className="info">
-                The study of molecular interactions, especially protein-protein interactions, is crucial for understanding the disease infection mechanism in plants. These interactions play an important role in disease infection and host immune responses against the pathogen attack. Among some critical fungal diseases, the incidences of Karnal bunt (Tilletia indica) around the world has hindered the export of the crops such as Wheat from infected regions, thus causing substantial economic losses. Due to sparse information on T. indica, limited insight is available in gaining in-depth knowledge of the interaction mechanisms between the host and pathogen proteins during the disease infection process. Here, we report the development of a comprehensive database and webserver, TritiKBdb, that implements various tools to study the protein-protein interactions in the Triticum species-Tilletia indica pathosystem. The interactomics tool allows the user to visualize / compare the networks of the predicted interactions. TritiKBdb is a user-friendly database that provides functional annotations such as subcellular localization, available domains, KEGG pathways, and GO terms of the host and pathogen proteins. Additionally, the information about the host and pathogen proteins that serve as transcription factors and effectors, respectively, is also made available. We believe that TritiKBdb will serve as a beneficial resource to the research community. 
-                </p>
-                {/* <p className="info">
-                  Wheat ({" "}
-                  <i>
-                    <b>Triticum aestivum</b>
-                  </i>{" "}
-                  ), the most widely cultivated crop in the world, ranks third
-                  and counts to around 35% of the total grains produced around
-                  the globe. The occurence of karnal bunt in wheat has affected
-                  the grain yield and quality of the crop to a great extent,
-                  thus being a major threat to the agriculture industry,
-                  worldwide. The disease is caused by smut fungus{" "}
-                  <i>
-                    <b>Tilletia indica</b>
-                  </i>{" "}
-                  a basidiomycete, invades the kernels and obtains nutrients
-                  from the endosperm, leaving behind waste products with a
-                  disagreeable odor that makes bunted kernels too unpalatable
-                  for use in flour or pasta.. This also affects{" "}
-                  <i>
-                    <b>Triticum turgidum</b>
-                  </i>{" "}
-                  (durum wheat) another most widely cultivated wheat. Karnal
-                  bunt is named after Karnal, India, where the disease was first
-                  discovered on a wheat crop in 1931. Since then, the disease
-                  has been reported in all major wheat-growing states of India,
-                  Pakistan, Afghanistan, Mexico, and certain areas of the
-                  Southwestern United States such as New Mexico, Arizona, and
-                  parts of Texas{" "}
-                  <Button type="link" shape="circle" onClick={this.openModel}>
-                    (Ref1)
-                  </Button>
-                  . Karnal bunt pathogenesis is heavily dependent on weather
-                  conditions. Relative humidity over 70% favors teliospore
-                  development. Furthermore, daytime temperatures in the range of
-                  18–24 °C, and soil temperatures in the range of 17–21 °C also
-                  increase the severity of Karnal bunt{" "}
-                  <Button type="link" shape="circle" onClick={this.openModel}>
-                    (Ref2)
-                  </Button>
-                  .
-                </p> */}
-                <Modal
-                  size="xl"
-                  style={{ bottom: 0 }}
-                  show={this.state.isOpen}
-                  onHide={this.closeModel}
-                >
-                  <Modal.Header closeButton></Modal.Header>
 
-                  <Modal.Body>
-                    <p>
-                      1. R. L. Forster and B. J. 1996. Goates.{" "}
-                      <a href="http://www.uiweb.uidaho.edu/ag/plantdisease/kbwheat.htm">
-                        http://www.uiweb.uidaho.edu/ag/plantdisease/kbwheat.htm
-                      </a>
-                      <br />
-                      2. U.S. Department of Agriculture 2007{" "}
-                      <a href="http://www.aphis.usda.gov/import_export/plants/manuals/domestic/downloads/kb.pdf">
-                        http://www.aphis.usda.gov/import_export/plants/manuals/domestic/downloads/kb.pdf
-                      </a>
-                    </p>
-                    {/* <Button type='danger' shape='round' onClick={this.closeModel}>Close</Button> */}
-                  </Modal.Body>
-                </Modal>
+                <p className="info">
+
+                  Wheat, the most widely cultivated crop in the world, ranks third and accounts for around 35% of the total grains produced around the globe. 
+                  Among some critical fungal diseases, the occurrence of Karnal Bunt (<b><i>Tilletia indica</i></b>, also known as partial bunt) in two of the most widely 
+                  cultivated species of Wheat (<b><i>Triticum aestivum</i></b>, <b><i>Triticum turgidum</i></b>) has affected the grain yield and quality of the crop to a great extent, 
+                  thus being a major threat to the agriculture industry worldwide. Karnal bunt is recognized to have a severe economic impact due to the loss 
+                  of grain weight (about 0.25%), followed by the imposition of various international regulatory/quarantine restrictions on the crop grown in 
+                  Karnal bunt infected regions. Most countries have a zero tolerance for Karnal bunt in import shipments.
+
+                  The morphological and physiological variability in <b><i>T. indica</i></b> isolates enhance their ability to infect a wide range of hosts; thus, they are considered genetically variable for developing resistant crop varieties. The study of molecular interactions, especially protein-protein interactions, is crucial for understanding the disease infection mechanism in plants. These interactions play an important role in disease infection and host immune responses against the pathogen attack. Here, we report the development of a comprehensive database and webserver, TritiKBdb, that implements various tools to study the protein-protein interactions in the Triticum species-Tilletia indica pathosystem. The novel interactomics tool allows the user to visualize / compare the networks of the predicted interactions in an enriched manner. TritiKBdb is a user-friendly database that provides functional annotations such as subcellular localization, available domains, KEGG pathways, and GO terms of the host and pathogen proteins. Additionally, the information about the host and pathogen proteins that serve as transcription factors and effectors, respectively, is also made available. We believe that TritiKBdb will serve as a beneficial resource to the research community, particularly to the plant breeders and plant pathologists to better understand the Karnal bunt disease mechanisms and interactions with Wheat, and help in developing more efficient and durable disease resistant cultivars.
+                </p>
+
+                
 
                 <a href={`${env.BASE_URL}/interactome`} target="_blank"
-            rel="noopener noreferrer">
+                  rel="noopener noreferrer">
                   <Button type="primary" shape="round">
                     Search Interactome
                   </Button>
                 </a>
                 <a href={`${env.BASE_URL}/search`} target="_blank"
-            rel="noopener noreferrer"><Button className="mx-4" type="primary" shape="round">
-                  Advance Search Module
-                </Button>
+                  rel="noopener noreferrer"><Button className="mx-4" type="primary" shape="round">
+                    Advance Search Module
+                  </Button>
                 </a>
               </div>
             </div>
           </div>
-          <div className="col-md-1"></div>
+          
           <div className="col-md-3 mt-3">
             <div className="card cardd">
               <h5 className="heading">Functional Annotations </h5>

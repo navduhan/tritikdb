@@ -1,25 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Table from 'react-bootstrap/Table';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { env } from '../../env';
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+
 
 import axios from 'axios';
 
 import './VisTable.scss';
 const tdata = JSON.parse(localStorage.getItem("resultid"));
-// const tdata = 'kbunt1652398829201results'
+
 export const VisTable = ({tableRowClicked, handleSearchChange}) => {
-  const { id } = useParams();
+  
   let [data, setData] = useState([]);
   let [totalData, setTotalData] = useState([]);
   let [tableData, setTableData] = useState([]);
   let [searchTerm, setSearchTerm] = useState('');
 
-  const proteins = [];
+  // const proteins = [];
 
   useEffect(() => {
     const fetchData = async () => {

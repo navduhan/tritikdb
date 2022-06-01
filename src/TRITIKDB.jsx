@@ -13,11 +13,13 @@ import Local from './pages/Annotation/Local';
 import TF from './pages/Annotation/TF';
 import Virulence from './pages/Annotation/Virulence';
 import Search from './pages/Search/Search';
+import Datasets from './pages/Datasets/Datasets';
 import {
     BrowserRouter as Router,
     Routes,
     Route
 } from 'react-router-dom';
+
 
 export class TRITIKDB extends Component {
     constructor(props){
@@ -26,6 +28,8 @@ export class TRITIKDB extends Component {
             baseUrlLen: env.BASE_URL.split('/').length
         }
     }
+
+
     render(){
         return(
             <Router>
@@ -66,6 +70,9 @@ export class TRITIKDB extends Component {
                     </Route>
 
                     <Route path={`${env.BASE_URL}/network`}  element={<VisPage />}>
+                    
+                    </Route>
+                    <Route path={`${env.BASE_URL}/datasets`}  element={<Datasets />}>
                     
                     </Route>
                 

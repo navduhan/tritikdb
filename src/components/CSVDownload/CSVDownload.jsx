@@ -32,6 +32,40 @@ export const downloadCsv = (data, tid) => {
         .join("\n");
       //  console.log(csvString);
     }
+
+    if (tid === "domain") {
+      csvString = [
+        [
+          "Host Protein",
+          "Pathogen Protein",
+          "Interactor A",
+          "Interactor B",
+          "Interaction Source",
+          "InteractorA Name",
+          "InteractorA InterPro",
+          "InteractorB Name",
+          "InteractorB InterPro",
+          "Interaction Confidence",
+          
+        ],
+        ...data.map((item) => [
+          item.Host_Protein,
+          item.Pathogen_Protein,
+          item.ProteinA,
+          item.ProteinB,
+          item.intdb,
+          item.DomainA_name,
+          item.DomainA_interpro,
+          item.DomainB_name,
+          item.DomainB_interpro,
+          item.score,
+          
+        ]),
+      ]
+        .map((e) => e.join(","))
+        .join("\n");
+      //  console.log(csvString);
+    }
   
     let csvData = csvPrefix + csvString;
   

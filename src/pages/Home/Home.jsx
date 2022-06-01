@@ -3,7 +3,6 @@ import { env } from '../../env';
 import { Divider, Button } from "antd";
 import "./Home.scss";
 import CookieConsent from "react-cookie-consent";
-import { Modal } from "react-bootstrap";
 export default class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -59,10 +58,9 @@ export default class Home extends React.Component {
               </div>
               
               <div className="col-md-7 infodiv">
-                <h5>
-                  TritiKBdb: Host-Pathogen Interaction Database of Karnal Bunt
-                  disease
-                </h5>
+                <div className=' row title'>
+                TritiKBdb: a Host-Pathogen Interaction Database for understanding Karnal Bunt disease infection mechanisms in Wheat 
+                </div>
                 <Divider />
 
                 <p className="info">

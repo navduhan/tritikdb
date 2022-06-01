@@ -3,7 +3,7 @@ import "bootstrap";
 import { Divider, Radio, Checkbox, Button } from "antd";
 import "antd/dist/antd.min.css";
 import "./Interactome.scss";
-import { InfoCircleOutlined } from "@ant-design/icons";
+import { InfoCircleOutlined} from "@ant-design/icons";
 import axios from "axios";
 import { env } from "../../env";
 
@@ -180,14 +180,12 @@ export default class Interactome extends React.Component {
 
     
 
-    let postBody;
-    let pspecies;
-    let hspecies;
-    if (this.state.status === "interolog") {
-      pspecies = "interolog_tindicas"
-      hspecies = "interolog_"+this.state.species
-      postBody = {
-        category: "interolog",
+
+    
+      let pspecies = "interolog_tindicas"
+      let hspecies = "interolog_"+this.state.species
+      let postBody = {
+        category: this.state.status,
         hspecies: hspecies,
         pspecies: pspecies,
         ids: this.state.idType,
@@ -200,30 +198,15 @@ export default class Interactome extends React.Component {
         pc: this.state.pcoverage,
         pe: this.state.pevalue,
         intdb: intdb,
+        domdb:domdb,
       };
-    }
-    if (this.state.status === "domain") {
-      pspecies = "domain_tindicas"
-      hspecies = "domain_"+this.state.species
-      postBody = {
-        category: "domain",
-        hspecies: hspecies,
-        pspecies: pspecies,
-        ids: this.state.idType,
-        genes:this.state.genes,
-        stype:this.state.searchType,
-        hi: this.state.identity,
-        hc: this.state.coverage,
-        he: this.state.evalue,
-        pi: this.state.pidentity,
-        pc: this.state.pcoverage,
-        pe: this.state.pevalue,
-        intdb: domdb.toString(),
-      };
-    }
     
-    console.log(postBody);
+    console.log(postBody)
     
+    if (this.state.status === 'domain'){
+      window.location.replace(`results`);
+    }
+    else{
     axios
       .post(
         // `${env.BACKEND}/api/ppi/?species=${this.state.species}&identity=${this.state.identity}&coverage=${this.state.coverage}&evalue=${this.state.evalue}&intdb=${intdb}`
@@ -239,6 +222,7 @@ export default class Interactome extends React.Component {
         window.location.replace(`results`);
       })
       .catch((err) => console.log(err));
+    }
   }
 
   render() {
@@ -253,6 +237,8 @@ export default class Interactome extends React.Component {
         pc: this.state.pcoverage,
         resultid: this.state.resultid,
         category: this.state.status,
+        species: this.state.species,
+        domdb: this.state.dcheckedList,
       })
     );
     let genePlaceholder = 'Example ENSEMBL-IDs: TraesCS6A02G059000, TraesCS5A02G216600, TraesCS2A02G417800';

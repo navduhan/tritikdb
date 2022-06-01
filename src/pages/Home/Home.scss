@@ -81,9 +81,17 @@
  .web{
      text-align: center;
      margin:0;
+    
  }
 
-
+.title{
+    text-align:center ;
+    padding-left: 20px;
+    padding-right:20px;
+    padding-bottom: 0;
+    font-size:1rem;
+    font-weight:bold;
+}
  .ant-btn-primary {
     color: #fff;
     border-color: lightblue !important;

@@ -1,0 +1,24 @@
+@import '../../scss/colors.scss';
+@import '../../scss/globals';
+
+
+.infot{
+    font-size: 1.2rem;
+    text-align: left;
+    color: $palette-2;
+    font-weight:bold;
+}
+
+.infoh{
+    text-align: left;
+}
+
+.footer{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.imk{
+    max-width: 800px;
+    align-items: center;
+}

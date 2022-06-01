@@ -14,6 +14,7 @@ import TF from './pages/Annotation/TF';
 import Virulence from './pages/Annotation/Virulence';
 import Search from './pages/Search/Search';
 import Datasets from './pages/Datasets/Datasets';
+import Help from './pages/Help/Help';
 import {
     BrowserRouter as Router,
     Routes,
@@ -73,6 +74,9 @@ export class TRITIKDB extends Component {
                     
                     </Route>
                     <Route path={`${env.BASE_URL}/datasets`}  element={<Datasets />}>
+                    
+                    </Route>
+                    <Route path={`${env.BASE_URL}/help`}  element={<Help />}>
                     
                     </Route>
                 

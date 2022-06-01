@@ -23,6 +23,7 @@ export default class Datasets extends React.Component {
                             <br/>
                             <b><i>Triticum aestivum</i></b> and <b><i>Triticum turgidum</i></b> the most widely cultivated species of wheat in the world. They are considered as a most important staple food due to its richness in various nutrients such as carbohydrates, proteins, and minerals.
                             <br/>
+                            <br/>
                             Link to <i>Triticum aestivum</i> dataset:   <a href="http://ftp.ensemblgenomes.org/pub/plants/release-50/fasta/triticum_aestivum/pep/" rel="noreferrer" target="_blank" >Ensembl Plants<sup> <i> <LinkOutlined /></i></sup></a>
                             <br/>
                             Link to <i>Triticum turgidum</i> dataset:   <a href="http://ftp.ensemblgenomes.org/pub/plants/release-50/fasta/triticum_turgidum/pep/" rel="noreferrer" target="_blank" >Ensembl Plants<sup> <i> <LinkOutlined /></i></sup></a>
@@ -32,6 +33,7 @@ export default class Datasets extends React.Component {
                         <b> <i>Tilletia </i>species (Infecting <i>Triticum</i>)</b>
 <br/>
 <b><i>Tilletia indica</i></b> fungal species that cause karnal bunt in wheat.  Karnal bunt is recognized to have a severe economic impact due to the loss of grain weight (about 0.25%), followed by the imposition of various international regulatory/quarantine restrictions on the crop grown in Karnal bunt infected regions. 
+<br/>
 <br/>
 Link to <i>Tilletia indica</i>: <a href="https://www.ncbi.nlm.nih.gov/data-hub/genome/GCA_001689995.1/" rel="noreferrer" target="_blank" >NCBI<sup> <i> <LinkOutlined /></i></sup></a>
                         </p>

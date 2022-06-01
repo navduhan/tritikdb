@@ -173,15 +173,13 @@ export default class Interactome extends React.Component {
     const intdb = this.state.checkedList.map((element) => {
       return element.toLowerCase();
     });
+    const intdbd = intdb.toString()
 
     const domdb =this.state.dcheckedList.map((element) => {
       return element.toLowerCase();
     });
 
-    
-
-
-    
+  
       let pspecies = "interolog_tindicas"
       let hspecies = "interolog_"+this.state.species
       let postBody = {
@@ -197,8 +195,8 @@ export default class Interactome extends React.Component {
         pi: this.state.pidentity,
         pc: this.state.pcoverage,
         pe: this.state.pevalue,
-        intdb: intdb,
-        domdb:domdb,
+        intdb: intdbd,
+        domdb: domdb,
       };
     
     console.log(postBody)

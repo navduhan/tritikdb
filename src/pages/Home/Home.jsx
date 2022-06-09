@@ -169,38 +169,38 @@ export default class Home extends React.Component {
               </p>
               <ul className="list list-inline ">
                 <li>
-                  <a className="linked" href="kegg/?id=tindica">
+                  <a className="linked" href={`${env.BASE_URL}/kegg/?id=tindica`}>
                     KEGG Pathways
                   </a>
                 </li>
                 <li>
-                  <a className="linked" href="go/?id=tindica">
+                  <a className="linked" href={`${env.BASE_URL}/go/?id=tindica`}>
                     Gene Ontology
                   </a>
                 </li>
 
                 <li>
-                  <a className="linked" href="interpro/?id=tindica">
+                  <a className="linked" href={`${env.BASE_URL}/interpro/?id=tindica`}>
                     Functional Domains
                   </a>
                 </li>
                 <li>
-                  <a className="linked" href="local/?id=tindica">
+                  <a className="linked" href={`${env.BASE_URL}/local/?id=tindica`}>
                     Subcellular Localization
                   </a>
                 </li>
                 <li>
-                  <a className="linked" href="virulence/?id=effector">
+                  <a className="linked" href={`${env.BASE_URL}/virulence/?id=effector`}>
                     Effector Proteins
                   </a>
                 </li>
                 <li>
-                  <a className="linked" href="virulence/?id=secretory">
+                  <a className="linked" href={`${env.BASE_URL}/virulence/?id=secretory`}>
                     Secretory Proteins
                   </a>
                 </li>
                 <li>
-                  <a className="linked" href="virulence/?id=effector_and_secretory">
+                  <a className="linked" href={`${env.BASE_URL}/virulence/?id=effector_and_secretory`}>
                     Effector and Secretory Proteins
                   </a>
                 </li>

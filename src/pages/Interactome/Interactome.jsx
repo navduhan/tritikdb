@@ -202,7 +202,7 @@ export default class Interactome extends React.Component {
     console.log(postBody)
     
     if (this.state.status === 'domain'){
-      window.location.replace(`results`);
+      window.location.replace(`${env.BASE_URL}/results`);
     }
     else{
     axios

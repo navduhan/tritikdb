@@ -32,6 +32,7 @@ class TNavbar extends React.Component {
     render() {console.log(this.props.active)
         let className = 'mx-1'
         let active = 'mx-1 current'
+        console.log(env.BASE_URL)
 return(
   <div className="container contain">
   <div className="row flex-lg-row align-items-center g-2 mt-2">

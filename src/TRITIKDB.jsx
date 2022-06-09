@@ -40,6 +40,7 @@ export class TRITIKDB extends Component {
                     <Route path={`${env.BASE_URL}/`} element={<Home />}>
                     
                     </Route>
+                    
                     <Route path={`${env.BASE_URL}/interactome`} element={<Interactome />}>
                     
                     </Route>

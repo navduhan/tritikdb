@@ -101,29 +101,29 @@ export default class Home extends React.Component {
               </p>
               <ul className="list list-inline ">
                 <li>
-                  <a className="linked" href="kegg/?id=aestivum">
+                  <a className="linked" href={`${env.BASE_URL}/kegg/?id=aestivum`}>
                     KEGG Pathways
                   </a>
                 </li>
                 <li>
                   {" "}
-                  <a className="linked" href="go/?id=aestivum">
+                  <a className="linked" href={`${env.BASE_URL}/go/?id=aestivum`}>
                     Gene Ontology
                   </a>
                 </li>
 
                 <li>
-                  <a className="linked" href="interpro/?id=aestivum">
+                  <a className="linked" href={`${env.BASE_URL}/interpro/?id=aestivum`}>
                     Functional Domains{" "}
                   </a>
                 </li>
                 <li>
-                  <a className="linked" href="local/?id=aestivum">
+                  <a className="linked" href={`${env.BASE_URL}/local/?id=aestivum`}>
                     Subcellular Localization{" "}
                   </a>
                 </li>
                 <li>
-                  <a className="linked" href="tf/?id=aestivum">
+                  <a className="linked" href={`${env.BASE_URL}/tf/?id=aestivum`}>
                     Transcription Factors{" "}
                   </a>
                 </li>
@@ -135,29 +135,29 @@ export default class Home extends React.Component {
               </p>
               <ul className="list list-inline ">
                 <li>
-                  <a className="linked" href="kegg/?id=turgidum">
+                  <a className="linked" href={`${env.BASE_URL}/kegg/?id=turgidum`}>
                     KEGG Pathways
                   </a>
                 </li>
                 <li>
                   {" "}
-                  <a className="linked" href="go/?id=turgidum">
+                  <a className="linked" href={`${env.BASE_URL}/go/?id=turgidum`}>
                     Gene Ontology
                   </a>
                 </li>
 
                 <li>
-                  <a className="linked" href="interpro/?id=turgidum">
+                  <a className="linked" href={`${env.BASE_URL}/interpro/?id=turgidum`}>
                     Functional Domains{" "}
                   </a>
                 </li>
                 <li>
-                  <a className="linked" href="local/?id=turgidum">
+                  <a className="linked" href={`${env.BASE_URL}/local/?id=turgidum`}>
                     Subcellular Localization{" "}
                   </a>
                 </li>
                 <li>
-                  <a className="linked" href="tf/?id=turgidum">
+                  <a className="linked" href={`${env.BASE_URL}/tf/?id=turgidum`}>
                     Transcription Factors{" "}
                   </a>
                 </li>

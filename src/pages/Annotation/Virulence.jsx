@@ -101,13 +101,13 @@ export default class GO extends React.Component {
             {this.state.List.map((result, index) => (
               <tr key={index + 1}>
                 <td>
-                  <a
-                    href={`https://plants.ensembl.org/Multi/Search/Results?species=all;idx=;q=${result["gene"]};site=ensemblunit`}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {result["gene"]}
-                  </a>
+                <a
+                          href={`https://www.ncbi.nlm.nih.gov/search/all/?term=${result["gene"]}%09`}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {result["gene"]}
+                        </a>
                 </td>
                 <td>{result["length"]}</td>
                 <td>{result["description"]}</td>

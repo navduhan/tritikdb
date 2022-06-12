@@ -62,6 +62,9 @@ export default class Interactome extends React.Component {
     this.identityHandler = this.identityHandler.bind(this);
     this.coverageHandler = this.coverageHandler.bind(this);
     this.evalueHandler = this.evalueHandler.bind(this);
+    this.pidentityHandler = this.pidentityHandler.bind(this);
+    this.pcoverageHandler = this.pcoverageHandler.bind(this);
+    this.pevalueHandler = this.pevalueHandler.bind(this);
     this.interactomeHandler = this.interactomeHandler.bind(this);
     this.intHandler = this.intHandler.bind(this);
     this.fileSelected = this.fileSelected.bind(this);

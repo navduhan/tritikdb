@@ -159,7 +159,7 @@ export default class Interactome extends React.Component {
   }
 
   fileSelected(fileText) {
-    const protein = fileText.split("\n");
+    const protein = fileText.trim().split("\n");
     this.setState({genes: protein});
    
   }

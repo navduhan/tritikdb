@@ -302,7 +302,7 @@ export default class Results extends React.Component {
                     className="interactor"
                   >
                   {result["ProteinA"]}
-                 
+                    {console.log(result["ProteinA"])}
                   </a>
                   )
               }

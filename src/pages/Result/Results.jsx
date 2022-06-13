@@ -122,6 +122,7 @@ export default class Results extends React.Component {
   componentDidMount() {
     
     this.fetchResults();
+    this.downloadResults();
     
   }
 

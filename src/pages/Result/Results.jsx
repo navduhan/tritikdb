@@ -324,14 +324,34 @@ export default class Results extends React.Component {
             
               </td>
               <td>
-            <a
+              {(() => {
+              if (onlyNumbers(result['ProteinB'])){
+                  return (
+                    <a
+                    href={` https://www.ncbi.nlm.nih.gov/protein/${result["ProteinB"]}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="interactor"
+                  >
+                  {result["ProteinB"]}
+                 
+                  </a>
+                  )
+              }
+              else{
+                <a
                 href={` https://www.uniprot.org/uniprot/${result["ProteinB"]}`}
                 target="_blank"
                 rel="noreferrer"
                 className="interactor"
               >
               {result["ProteinB"]}
+             
               </a>
+              }
+              
+              return null;
+            })()}
               </td>
      {this.state.category==='interolog' &&(
        <>

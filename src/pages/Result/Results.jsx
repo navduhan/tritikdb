@@ -291,7 +291,7 @@ export default class Results extends React.Component {
             </td>
            
             <td>
-
+            {console.log(result["ProteinA"])}
             {(() => {
               if (onlyNumbers(result['ProteinA'])){
                   return (

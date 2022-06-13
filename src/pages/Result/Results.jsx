@@ -295,6 +295,7 @@ export default class Results extends React.Component {
                 className="interactor"
               >
               {result["ProteinA"]}
+              {console.log(typeof(result["ProteinA"]))}
               </a>
               </td>
               <td>

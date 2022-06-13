@@ -49,6 +49,7 @@ export default class Results extends React.Component {
       category:category,
     };
     this.handlePageClick = this.handlePageClick.bind(this);
+    this.downloadResults = this.downloadResults.bind(this)
    
   }
 
@@ -122,7 +123,7 @@ export default class Results extends React.Component {
   componentDidMount() {
     
     this.fetchResults();
-    this.downloadResults();
+    
     
   }
 

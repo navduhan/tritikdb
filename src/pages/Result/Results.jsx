@@ -98,14 +98,14 @@ export default class Results extends React.Component {
 
   downloadResults(){
     if (category ==='domain'){
-      // axios
-      // .get(
-      //   `${env.BACKEND}/api/domain_download/?species=${this.state.species}&intdb=${pdata.domdb}`
-      // )
-      // .then((res) => {
-      //   const dResult = res.data.results 
-      //   this.setState({dResult})
-      // })
+      axios
+      .get(
+        `${env.BACKEND}/api/domain_download/?species=${this.state.species}&intdb=${pdata.domdb}`
+      )
+      .then((res) => {
+        const dResult = res.data.results 
+        this.setState({dResult})
+      })
     }
     else{
     axios
@@ -122,7 +122,7 @@ export default class Results extends React.Component {
   componentDidMount() {
     
     this.fetchResults();
-    this.downloadResults();
+    
   }
 
   handlePageClick = (e) => {

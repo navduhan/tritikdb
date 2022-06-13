@@ -341,6 +341,7 @@ export default class Results extends React.Component {
                   )
               }
               else{
+                return(
                 <a
                 href={` https://www.uniprot.org/uniprot/${result["ProteinB"]}`}
                 target="_blank"
@@ -350,6 +351,7 @@ export default class Results extends React.Component {
               {result["ProteinB"]}
              
               </a>
+                )
               }
               
               return null;

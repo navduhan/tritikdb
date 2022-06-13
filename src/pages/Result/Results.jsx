@@ -24,6 +24,9 @@ if (pdata){
 
 }
 
+function onlyNumbers(str) {
+  return /^[0-9]+$/.test(str);
+}
 
 
 export default class Results extends React.Component {
@@ -288,15 +291,37 @@ export default class Results extends React.Component {
             </td>
            
             <td>
-            <a
+
+            {(() => {
+              if (onlyNumbers(result['ProteinA'])){
+                  return (
+                    <a
+                    href={` https://www.ncbi.nlm.nih.gov/protein/${result["ProteinA"]}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="interactor"
+                  >
+                  {result["ProteinA"]}
+                 
+                  </a>
+                  )
+              }
+              else{
+                <a
                 href={` https://www.uniprot.org/uniprot/${result["ProteinA"]}`}
                 target="_blank"
                 rel="noreferrer"
                 className="interactor"
               >
               {result["ProteinA"]}
-              {console.log(typeof(result["ProteinA"]))}
+             
               </a>
+              }
+              
+              return null;
+            })()}
+            
+            
               </td>
               <td>
             <a

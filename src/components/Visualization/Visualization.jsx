@@ -60,6 +60,10 @@ export const Visualization = React.memo(props => {
   let hpidbs = [];
   let mints = [];
   let intacts = [];
+  let dips = [];
+  let biogrids =[];
+  let strings = [];
+  let arabihpis = [];
 
   const idDict = {
     hpidb : hpidbs,

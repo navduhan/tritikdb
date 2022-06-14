@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { env } from '../../env';
 import { useState, useEffect } from 'react';
-import ReactLoading from 'react-loading';
+
 
 import axios from 'axios';
 

@@ -22,6 +22,9 @@ if (pdata){
   category = pdata.category
   species = pdata.species
   idt = pdata.ids
+  if (category==='domain'){
+
+  
   if (pdata.genes ===''){
     console.log("yes")
     genes = []
@@ -30,10 +33,9 @@ if (pdata){
       genes = pdata.genes.split(", ")
   }
   
+}
   
   
-  console.log(idt)
-  console.log(genes)
   // console.log(typeof(genes))
   
 

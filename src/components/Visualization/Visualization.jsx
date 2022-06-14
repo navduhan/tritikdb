@@ -64,7 +64,11 @@ export const Visualization = React.memo(props => {
   const idDict = {
     hpidb : hpidbs,
     mint: mints,
-    intact: intacts
+    intact: intacts,
+    string:strings,
+    dip:dips,
+    arabihpi:arabihpis,
+    biogrid:biogrids
   }
 
   if (graphData.length && data.data) {
@@ -178,6 +182,20 @@ const opts = {
 
               for (let id of intacts) {
                 cyRef.$(id).style({'line-color': '#7856c7'});
+              }
+              for (let id of strings) {
+                cyRef.$(id).style({'line-color': '#f07eba'});
+              }
+
+              for (let id of dips) {
+                cyRef.$(id).style({'line-color': '#7e7ef0'});
+              }
+
+              for (let id of biogrids) {
+                cyRef.$(id).style({'line-color': '#6ca6bc'});
+              }
+              for (let id of arabihpis) {
+                cyRef.$(id).style({'line-color': '#d6d978'});
               }
             }}
             style={ { width: 'auto', height: '700px' } }

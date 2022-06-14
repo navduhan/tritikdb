@@ -15,6 +15,8 @@ const pdata = JSON.parse(localStorage.getItem("param"));
 
 let category;
 let species;
+let genes;
+let idt;
 if (pdata){
 
   category = pdata.category
@@ -49,6 +51,8 @@ export default class Results extends React.Component {
       isOpen:false,
       species:species,
       category:category,
+      idt:idt,
+      genes:genes,
     };
     this.handlePageClick = this.handlePageClick.bind(this);
     this.downloadResults = this.downloadResults.bind(this)
@@ -63,7 +67,7 @@ export default class Results extends React.Component {
       this.openModel();
       axios
       .get(
-        `${env.BACKEND}/api/domain_results/?species=${species}&page=${this.state.currentPage}&size=${this.state.perPage}&genes=${genes}&idt=${idt}&intdb=3DID`
+        `${env.BACKEND}/api/domain_results/?species=${species}&page=${this.state.currentPage}&size=${this.state.perPage}&genes=${this.state.genes}&idt=${this.state.idt}&intdb=3DID`
       )
       .then((res) => {
         this.closeModel();

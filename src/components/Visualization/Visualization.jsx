@@ -134,7 +134,7 @@ const opts = {
       style: {
         width: function(elements){ return Math.max(1, Math.ceil(elements.degree()/10))*5 ; },
         height: function(elements){ return Math.max(1, Math.ceil(elements.degree()/10)) *5; },
-        label: 'data(label)'
+   
       }
     },
     {

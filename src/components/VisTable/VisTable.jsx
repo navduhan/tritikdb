@@ -18,7 +18,7 @@ export const VisTable = ({tableRowClicked, handleSearchChange}) => {
   let [totalData, setTotalData] = useState([]);
   let [tableData, setTableData] = useState([]);
   let [searchTerm, setSearchTerm] = useState('');
-
+  // let [isOpen,setisOpen] = useState(false);
   // const proteins = [];
 
   useEffect(() => {
@@ -27,6 +27,7 @@ export const VisTable = ({tableRowClicked, handleSearchChange}) => {
       .get(
         `${env.BACKEND}/api/network/?results=${tdata}`
       );
+      
       setData(results);
 
       
@@ -38,6 +39,8 @@ export const VisTable = ({tableRowClicked, handleSearchChange}) => {
 
     fetchData();
   }, []);
+
+  
 
   let results;
 

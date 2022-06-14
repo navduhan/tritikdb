@@ -23,8 +23,9 @@ if (pdata){
   species = pdata.species
   idt = pdata.ids
   genes = pdata.genes
-  console.log(category)
-  console.log(species)
+  console.log(idt)
+  console.log(genes)
+  
 
 }
 

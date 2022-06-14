@@ -22,9 +22,10 @@ if (pdata){
   category = pdata.category
   species = pdata.species
   idt = pdata.ids
-  genes = pdata.genes
+  genes = pdata.genes.split(", ")
   console.log(idt)
-  console.log(genes)
+  // console.log(genes)
+  // console.log(typeof(genes))
   
 
 }
@@ -62,13 +63,23 @@ export default class Results extends React.Component {
 
   openModel = () => this.setState({ isOpen: true, dList:[]});
   closeModel = () => this.setState({ isOpen: false });
-  
+
   fetchResults() {
+    const postBody = {
+      species:species,
+      page:this.state.currentPage,
+      size: this.state.perPage,
+      genes: this.state.genes,
+      idt: this.state.idt,
+      intdb:'3DID',
+      
+    }
     if (category === 'domain'){
+      console.log(this.state.genes)
       this.openModel();
       axios
-      .get(
-        `${env.BACKEND}/api/domain_results/?species=${species}&page=${this.state.currentPage}&size=${this.state.perPage}&genes=${this.state.genes}&idt=${this.state.idt}&intdb=3DID`
+      .post(
+        `${env.BACKEND}/api/domain_results/`, postBody
       )
       .then((res) => {
         this.closeModel();

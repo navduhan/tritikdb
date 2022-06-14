@@ -22,9 +22,19 @@ if (pdata){
   category = pdata.category
   species = pdata.species
   idt = pdata.ids
-  genes = pdata.genes.split(", ")
+  if (pdata.genes ===''){
+    console.log("yes")
+    genes = []
+  }
+  if (pdata.genes !=''){
+
+    genes = pdata.genes.split(",")
+  }
+  
+  
+  
   console.log(idt)
-  // console.log(genes)
+  console.log(genes)
   // console.log(typeof(genes))
   
 

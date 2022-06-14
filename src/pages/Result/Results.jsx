@@ -27,8 +27,7 @@ if (pdata){
     genes = []
   }
   if (pdata.genes !=''){
-
-    genes = pdata.genes.split(",")
+      genes = pdata.genes.split(", ")
   }
   
   

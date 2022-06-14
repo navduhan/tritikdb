@@ -240,6 +240,8 @@ export default class Interactome extends React.Component {
         category: this.state.status,
         species: this.state.species,
         domdb: this.state.dcheckedList,
+        ids: this.state.idType,
+        genes:this.state.genes,
       })
     );
     let genePlaceholder = 'Example ENSEMBL-IDs: TraesCS6A02G059000, TraesCS5A02G216600, TraesCS2A02G417800';

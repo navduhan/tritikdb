@@ -19,6 +19,8 @@ if (pdata){
 
   category = pdata.category
   species = pdata.species
+  idt = pdata.ids
+  genes = pdata.genes
   console.log(category)
   console.log(species)
 
@@ -61,7 +63,7 @@ export default class Results extends React.Component {
       this.openModel();
       axios
       .get(
-        `${env.BACKEND}/api/domain_results/?species=${species}&page=${this.state.currentPage}&size=${this.state.perPage}&intdb=3DID`
+        `${env.BACKEND}/api/domain_results/?species=${species}&page=${this.state.currentPage}&size=${this.state.perPage}&genes=${genes}&idt=${idt}&intdb=3DID`
       )
       .then((res) => {
         this.closeModel();

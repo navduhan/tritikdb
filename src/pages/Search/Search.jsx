@@ -30,7 +30,7 @@ export default class Search extends React.Component {
               <i>Triticum aestivum </i>
             </Radio>
             <Radio value="turgidums" onChange={this.speciesHandler}>
-              <i>Triticum turgidumns </i>
+              <i>Triticum turgidum </i>
             </Radio>
             <Radio value="tindicas" onChange={this.speciesHandler}>
               <i>Tilletia indica </i>

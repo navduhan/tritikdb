@@ -72,8 +72,7 @@ export default class Home extends React.Component {
                   of grain weight (about 0.25%), followed by the imposition of various international regulatory/quarantine restrictions on the crop grown in 
                   Karnal bunt infected regions. Most countries have a zero tolerance for Karnal bunt in import shipments.
 
-                  The morphological and physiological variability in <b><i>T. indica</i></b> isolates enhance their ability to infect a wide range of hosts; thus, 
-                  they are considered genetically variable for developing resistant crop varieties. The study of molecular interactions, especially protein-protein 
+                  The morphological and physiological variability in <b><i>T. indica</i></b> isolates enhance their ability to infect a wide range of hosts. The study of molecular interactions, especially protein-protein 
                   interactions, is crucial for understanding the disease infection mechanism in plants. These interactions play an important role in disease infection 
                   and host immune responses against the pathogen attack. Here, we report the development of a comprehensive database and webserver, TritiKBdb, that implements
                    various tools to study the protein-protein interactions in the Triticum species-Tilletia indica pathosystem. The novel interactomics tool allows the user

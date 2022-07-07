@@ -72,7 +72,15 @@ export default class Home extends React.Component {
                   of grain weight (about 0.25%), followed by the imposition of various international regulatory/quarantine restrictions on the crop grown in 
                   Karnal bunt infected regions. Most countries have a zero tolerance for Karnal bunt in import shipments.
 
-                  The morphological and physiological variability in <b><i>T. indica</i></b> isolates enhance their ability to infect a wide range of hosts; thus, they are considered genetically variable for developing resistant crop varieties. The study of molecular interactions, especially protein-protein interactions, is crucial for understanding the disease infection mechanism in plants. These interactions play an important role in disease infection and host immune responses against the pathogen attack. Here, we report the development of a comprehensive database and webserver, TritiKBdb, that implements various tools to study the protein-protein interactions in the Triticum species-Tilletia indica pathosystem. The novel interactomics tool allows the user to visualize / compare the networks of the predicted interactions in an enriched manner. TritiKBdb is a user-friendly database that provides functional annotations such as subcellular localization, available domains, KEGG pathways, and GO terms of the host and pathogen proteins. Additionally, the information about the host and pathogen proteins that serve as transcription factors and effectors, respectively, is also made available. We believe that TritiKBdb will serve as a beneficial resource to the research community, particularly to the plant breeders and plant pathologists to better understand the Karnal bunt disease mechanisms and interactions with Wheat, and help in developing more efficient and durable disease resistant cultivars.
+                  The morphological and physiological variability in <b><i>T. indica</i></b> isolates enhance their ability to infect a wide range of hosts; thus, 
+                  they are considered genetically variable for developing resistant crop varieties. The study of molecular interactions, especially protein-protein 
+                  interactions, is crucial for understanding the disease infection mechanism in plants. These interactions play an important role in disease infection 
+                  and host immune responses against the pathogen attack. Here, we report the development of a comprehensive database and webserver, TritiKBdb, that implements
+                   various tools to study the protein-protein interactions in the Triticum species-Tilletia indica pathosystem. The novel interactomics tool allows the user
+                    to visualize / compare the networks of the predicted interactions in an enriched manner. TritiKBdb is a user-friendly database that provides functional
+                     annotations such as subcellular localization, available domains, KEGG pathways, and GO terms of the host and pathogen proteins. Additionally,
+                      the information about the host and pathogen proteins that serve as transcription factors and effectors, respectively, is also made available. 
+                      TritiKBdb could serve as a beneficial resource to better understand the Karnal bunt disease mechanisms and interactions with Wheat, and help in developing more efficient and durable disease resistant cultivars.
                 </p>
 
                 
@@ -209,10 +217,11 @@ export default class Home extends React.Component {
           </div>
         </div>
         <div className="row flex-lg-row justify-content-center g-2 my-2">
+        <Divider />
           <h4>Data Sources</h4>
         </div>
 
-        <Divider />
+       
         <div className="row flex-lg-row justify-content-center g-2 my-2">
           <a
             href="https://hpidb.igbb.msstate.edu/"
